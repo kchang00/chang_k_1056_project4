@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+.hidden {
+	display: none;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	background-color: #efefef;
+	max-width: 1140px;
+}
+
+.box {
+	color: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+	/* flex-grow, flex-shrink, flex-basis*/
+	/* flex-basis 0 equally sizes boxes even if one had more content*/
+	height: 50vh;
+	flex: 1 1 auto;
+}
+
+#box1 {
+	background-color: pink;
+}
+
+#box2 {
+	background-color: tomato;
+}
+
+#box3, #box4 {
+	display: none;
+/*	background-color: skyblue;*/
+}
+
+@media screen and (min-width: 641px) {
+	#container {
+		flex-direction: row;
+	}
+	.box {
+		flex: 1 1 auto;
+	}
+
+	#box1 {
+		background-color: skyblue;
+	}
+
+	#box2 {
+	  	background-color: purple;
+	}
+	
+	#box3 {
+		display: block;
+	  	background-color: grey;
+	}
+
+	#box4 {
+		display: block;
+	  	background-color: brown;
+	}
+}
